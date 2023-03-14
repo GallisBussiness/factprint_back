@@ -7,6 +7,9 @@ export class CreateProduitDto {
     @IsMongoId()
     unite: string;
 
+    @IsNumber()
+    pv: number;
+
     @IsOptional()
     @IsNumber()
     qteStock: number;

@@ -34,6 +34,7 @@
     "helmet": "^6.0.1",
     "mongoose": "^7.0.1",
     "mongoose-autopopulate": "^1.0.0",
+    "mongoose-serial": "^1.0.4",
     "passport": "^0.6.0",
     "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",

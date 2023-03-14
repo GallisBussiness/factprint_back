@@ -1,9 +1,9 @@
 import { Injectable,HttpException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
 import { CreateFactureDto } from './dto/create-facture.dto';
 import { UpdateFactureDto } from './dto/update-facture.dto';
 import { Facture, FactureDocument } from './entities/facture.entity';
+import { Model } from 'mongoose';
 
 @Injectable()
 export class FactureService {

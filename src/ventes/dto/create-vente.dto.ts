@@ -6,4 +6,7 @@ export class CreateVenteDto {
 
  @IsNumber()
  qte: number;
+
+ @IsNumber()
+ pv: number;
 }

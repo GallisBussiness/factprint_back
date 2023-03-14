@@ -2,15 +2,12 @@ import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { Type } from "class-transformer";
 import { Document, Types } from "mongoose";
 import { Client } from "src/client/entities/client.entity";
-import { Vente, VenteSchema } from "src/ventes/entities/vente.entity";
 
-export type FactureDocument = Facture & Document;
+export type FactureVenteDocument = FactureVente & Document;
+
 
 @Schema({timestamps: true})
-export class Facture {
-
-    @Prop({type: String})
-    numero:string;
+export class FactureVente {
 
     @Prop({type: String, required: true})
     date:string;
@@ -28,10 +25,7 @@ export class Facture {
     @Type(() => Client)
     client: Client;
 
-    @Prop({type: [{type: VenteSchema}], required: true})
-    @Type(() => Vente)
-    ventes: Vente[];
 }
 
 
-export const FactureSchema = SchemaFactory.createForClass(Facture);
+export const FactureVenteSchema = SchemaFactory.createForClass(FactureVente);    

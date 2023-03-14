@@ -8,6 +8,7 @@ import { Facture, FactureSchema } from './entities/facture.entity';
   imports: [MongooseModule.forFeatureAsync([{name: Facture.name, useFactory: () => {
     const schema = FactureSchema;
     schema.plugin(require('mongoose-autopopulate'));
+    schema.plugin(require('mongoose-serial'), { field:"numero"});
     return schema;
   }}])],
   controllers: [FactureController],

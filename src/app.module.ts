@@ -15,6 +15,8 @@ import { FactureModule } from './facture/facture.module';
 import { UniteModule } from './unite/unite.module';
 import { FournisseurModule } from './fournisseur/fournisseur.module';
 import { StockModule } from './stock/stock.module';
+import { FactureAchatModule } from './facture-achat/facture-achat.module';
+import { FactureVenteModule } from './facture-vente/facture-vente.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -42,6 +44,8 @@ import { StockModule } from './stock/stock.module';
     ProduitsModule,
     FactureModule,
     UniteModule,
+    FactureAchatModule,
+    FactureVenteModule,
     FournisseurModule,
     StockModule
   ],
